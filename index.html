@@ -5,16 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Mis finanzas</title>
 <link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#13302F"><link rel="icon" href="icon-192.png"><link rel="apple-touch-icon" href="icon-192.png">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Figtree:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Figtree:wght@400;500;600&display=swap">
 <style>
-:root{--bg:#EEF2F0;--surf:#FFFFFF;--ink:#13302F;--mute:#5E7270;--line:#D5DEDB;--in:#1C7C57;--out:#B02E5B;--goal:#B7870F;--acc:#13302F;--accfg:#FFFFFF;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1B1A;--surf:#172827;--ink:#E6F0ED;--mute:#8FA7A3;--line:#2A3F3D;--in:#4CC592;--out:#F07AA0;--goal:#E5B84A;--acc:#E6F0ED;--accfg:#0F1B1A;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#0F1B1A;--surf:#172827;--ink:#E6F0ED;--mute:#8FA7A3;--line:#2A3F3D;--in:#4CC592;--out:#F07AA0;--goal:#E5B84A;--acc:#E6F0ED;--accfg:#0F1B1A;color-scheme:dark}
+:root{--bg:#F5EFE6;--surf:#FFFDF9;--ink:#1F1A16;--mute:#6F645A;--line:#E4D9CB;--in:#1B7F5C;--out:#B3263E;--goal:#A8650F;--acc:#C2410C;--accfg:#FFFFFF;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14110F;--surf:#1F1A17;--ink:#F3EBE1;--mute:#A39688;--line:#332B26;--in:#5FD3A0;--out:#FF7A8A;--goal:#F2B84B;--acc:#FF8A4C;--accfg:#1A0F08;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#14110F;--surf:#1F1A17;--ink:#F3EBE1;--mute:#A39688;--line:#332B26;--in:#5FD3A0;--out:#FF7A8A;--goal:#F2B84B;--acc:#FF8A4C;--accfg:#1A0F08;color-scheme:dark}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.5 Figtree,system-ui,sans-serif}
-.wrap{max-width:1040px;margin:0 auto;padding:20px 16px 60px}
-h1,h2,.big{font-family:"Bricolage Grotesque",Figtree,sans-serif;margin:0}
+.wrap{max-width:640px;margin:0 auto;padding:20px 16px 96px}[hidden]{display:none!important}
+h1,h2,.big{font-family:Fraunces,Georgia,serif;margin:0}
 h2{font-size:1.2rem;margin-bottom:12px}
 header{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:18px}
 h1{font-size:1.5rem}
@@ -24,18 +24,18 @@ input,select{background:var(--surf);border:1px solid var(--line);border-radius:8
 .ctl input,.ctl select{width:auto}
 input[type=checkbox]{width:auto}
 input:focus-visible,select:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
-button{cursor:pointer;border:1px solid var(--line);background:var(--surf);border-radius:8px;padding:9px 14px;font-weight:600}
+button{cursor:pointer;border:1px solid var(--line);background:var(--surf);border-radius:12px;padding:9px 14px;font-weight:600}
 button.pri{background:var(--acc);color:var(--accfg);border-color:var(--acc)}
-.bal{background:var(--acc);color:var(--accfg);border-radius:14px;padding:22px;margin-bottom:14px}
+.bal{background:var(--acc);color:var(--accfg);border-radius:24px;padding:26px 22px;margin-bottom:14px}
 .bal .big{font-size:clamp(2rem,8vw,3.2rem);font-weight:700;line-height:1.1}
 .bal small{opacity:.75}
 .sum{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px}
-.sum div{background:var(--surf);border:1px solid var(--line);border-radius:10px;padding:12px}
-.sum b{display:block;font-family:"Bricolage Grotesque",sans-serif;font-size:1.15rem;overflow-wrap:anywhere}
+.sum div{background:var(--surf);border:1px solid var(--line);border-radius:16px;padding:12px}
+.sum b{display:block;font-family:Fraunces,Georgia,serif;font-size:1.15rem;overflow-wrap:anywhere}
 .sum span{color:var(--mute);font-size:.85rem}
-.grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:18px;align-items:start}
+.grid{display:block}
 @media(max-width:760px){.grid{grid-template-columns:1fr}.sum b{font-size:1rem}}
-.card{background:var(--surf);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:18px}
+.card{background:var(--surf);border:1px solid var(--line);border-radius:20px;padding:18px;margin-bottom:16px;box-shadow:0 1px 0 var(--line)}
 .seg{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px}
 .seg button[aria-pressed="true"]{background:var(--acc);color:var(--accfg);border-color:var(--acc)}
 label{display:block;font-size:.85rem;color:var(--mute);margin:10px 0 3px}
@@ -59,6 +59,8 @@ textarea{width:100%;height:70px;background:var(--surf);color:var(--ink);border:1
 @media(prefers-reduced-motion:no-preference){.bar i{transition:width .4s}}
 .chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px}.chips button{padding:5px 10px;font-weight:500}.chips .x{padding:5px 4px}
 #lock{position:fixed;inset:0;z-index:99;background:var(--bg);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;padding:20px}#lock[hidden]{display:none}
+#nav{position:fixed;left:0;right:0;bottom:0;display:flex;background:var(--surf);border-top:1px solid var(--line);padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px));z-index:50}#nav button{flex:1;border:0;background:none;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:.72rem;font-weight:600;color:var(--mute);padding:6px 2px;border-radius:12px}#nav b{font-size:1.2rem;line-height:1}#nav button[aria-current=true]{color:var(--acc)}
+.fine{color:var(--goal)}
 </style>
 </head>
 <body>
@@ -73,13 +75,13 @@ textarea{width:100%;height:70px;background:var(--surf);color:var(--ink);border:1
 </header>
 <div id="rem" class="warn" hidden></div>
 <div id="warn" class="warn" hidden></div>
-<div class="bal"><small>Disponible en el período</small><div class="big" id="bal"></div></div>
-<div class="sum" id="sum"></div>
-<p id="cmp" class="m" style="margin:-8px 0 14px"></p>
+<div class="bal" data-tab="resumen"><small>Disponible en el período</small><div class="big" id="bal"></div></div>
+<div class="sum" id="sum" data-tab="resumen"></div>
+<p data-tab="resumen" id="cmp" class="m" style="margin:-8px 0 14px"></p>
 
 <div class="grid">
  <div>
-  <section class="card">
+  <section class="card" data-tab="mov">
    <h2 id="ft2">Agregar movimiento</h2><div class="chips" id="chips"></div>
    <div class="seg" id="seg"><button type="button" data-t="out" aria-pressed="true">Gasto</button><button type="button" data-t="in" aria-pressed="false">Ingreso</button></div>
    <div class="two"><div><label for="amt">Monto</label><input id="amt" type="number" inputmode="decimal" min="0" step="0.01" placeholder="0.00"></div><div><label for="mc">Moneda</label><select id="mc"></select></div></div>
@@ -90,13 +92,13 @@ textarea{width:100%;height:70px;background:var(--surf);color:var(--ink);border:1
    <p id="err" class="out" role="alert" style="min-height:1.4em;margin:8px 0 0"></p>
    <div class="row"><button class="pri" id="add" type="button" style="flex:1">Guardar movimiento</button><button id="tp" type="button" title="Guardar como atajo de un toque">★ Atajo</button><button id="cn" type="button" hidden>Cancelar</button></div>
   </section>
-  <section class="card">
+  <section class="card" data-tab="metas">
    <h2>Nueva meta</h2>
    <label for="gn">Nombre</label><input id="gn" type="text" placeholder="Ej. Viaje, fondo de emergencia">
    <div class="two"><div><label for="gt">Monto a alcanzar</label><input id="gt" type="number" inputmode="decimal" min="0" step="0.01"></div><div><label for="gd">Fecha límite (opcional)</label><input id="gd" type="date"></div></div>
    <button class="pri" id="addg" type="button" style="width:100%;margin-top:12px">Crear meta</button>
   </section>
-  <section class="card">
+  <section class="card" data-tab="mas">
    <h2>Cuentas</h2>
    <div id="accs"></div>
    <div class="row" style="margin-top:8px"><input id="an" type="text" placeholder="Nueva cuenta (ej. Transfermóvil)" aria-label="Nombre de la cuenta"><button id="aa" type="button">Crear</button></div>
@@ -107,32 +109,42 @@ textarea{width:100%;height:70px;background:var(--surf);color:var(--ink);border:1
    <p id="aerr" class="out" role="alert" style="min-height:1.4em;margin:6px 0 0"></p>
    <button id="tb" type="button" style="width:100%">Transferir</button>
   </section>
-  <section class="card">
+  <section class="card" data-tab="mas">
    <h2>Tasas de cambio</h2>
    <p class="empty">Cuántos CUP vale 1 unidad. Ajústalas a la tasa que uses; los totales se convierten con ellas.</p>
    <div id="rates"></div><div id="hist"></div><button id="rh" type="button" style="width:100%;margin-top:8px">Aplicar tasa histórica a mis movimientos</button><p id="hm" class="m"></p>
   </section>
  </div>
  <div>
-  <section class="card"><h2>Ingresos vs. gastos</h2><div id="charts"></div></section>
-  <section class="card"><h2>Metas</h2><div id="goals"></div><p class="m">Aportar y retirar usan la moneda y cuenta de «Agregar movimiento».</p></section>
-  <section class="card">
+  <section class="card" data-tab="resumen"><h2>Ingresos vs. gastos</h2><div id="charts"></div></section>
+  <section class="card" data-tab="metas"><h2>Metas</h2><div id="goals"></div><p class="m">Aportar y retirar usan la moneda y cuenta de «Agregar movimiento».</p></section>
+  <section class="card" data-tab="resumen">
    <h2>Gastos por categoría</h2><div id="cbreak"></div>
    <label>Presupuesto mensual por categoría</label>
    <div class="two"><select id="bc" aria-label="Categoría"></select><input id="bv" type="number" inputmode="decimal" min="0" step="0.01" placeholder="Límite (0 = quitar)" aria-label="Límite"></div>
    <button id="bs" type="button" style="width:100%;margin-top:8px">Fijar presupuesto</button>
   </section>
-  <section class="card"><h2>Deudas y préstamos</h2><div id="debts"></div>
+  <section class="card" data-tab="disc"><h2>Hoy</h2><div id="today"></div><button id="nb" type="button" style="width:100%;margin-top:8px">Activar avisos</button><p id="nm" class="m"></p><p class="m">Los avisos llegan mientras la app esté abierta o en segundo plano. Para recibirlos con la app cerrada hace falta un servidor de avisos (siguiente fase).</p></section>
+  <section class="card" data-tab="disc"><h2>Cofre de multas</h2><div id="vault"></div></section>
+  <section class="card" data-tab="disc"><h2>Nueva meta de disciplina</h2>
+   <label for="dn">Qué quieres lograr</label><input id="dn" type="text" placeholder="Ej. Planchas">
+   <label for="dtm">Horarios (separados por coma)</label><input id="dtm" type="text" placeholder="07:00, 13:00, 20:00">
+   <div class="two"><div><label for="dwin">Margen para cumplir</label><select id="dwin"><option value="10">10 min</option><option value="15">15 min</option><option value="30" selected>30 min</option><option value="60">60 min</option></select></div><div><label for="ds">Empieza</label><input id="ds" type="date"></div></div>
+   <div class="two"><div><label for="df">Multa por falta</label><input id="df" type="number" min="0" step="0.01" inputmode="decimal"></div><div><label for="dcu">Moneda</label><select id="dcu"></select></div></div>
+   <div class="two"><div><label for="dur">Duración (días)</label><input id="dur" type="number" min="1" value="30"></div><div><label for="dcf">Quién confirma</label><select id="dcf"><option>Yo mismo</option><option disabled>Otra persona (con sincronización)</option></select></div></div>
+   <p id="de" class="out" role="alert" style="min-height:1.4em;margin:8px 0 0"></p><button class="pri" id="dcb" type="button" style="width:100%">Crear meta de disciplina</button></section>
+  <section class="card" data-tab="disc"><h2>Mis metas de disciplina</h2><div id="dlist"></div></section>
+  <section class="card" data-tab="mas"><h2>Deudas y préstamos</h2><div id="debts"></div>
    <div class="two"><input id="dw" type="text" placeholder="Persona" aria-label="Persona"><select id="dk" aria-label="Tipo"><option value="due">Me debe</option><option value="owe">Le debo</option></select></div>
    <div class="two" style="margin-top:8px"><input id="da2" type="number" step="0.01" inputmode="decimal" placeholder="Monto" aria-label="Monto"><select id="dc" aria-label="Moneda"></select></div>
    <label for="dd">Vence (opcional)</label><input id="dd" type="date"><button id="dadd" type="button" style="width:100%;margin-top:8px">Agregar</button></section>
-  <section class="card"><h2>Movimientos fijos mensuales</h2><div id="recs"></div></section>
-  <section class="card">
+  <section class="card" data-tab="mov"><h2>Movimientos fijos mensuales</h2><div id="recs"></div></section>
+  <section class="card" data-tab="mov">
    <h2>Movimientos</h2>
    <div class="two" style="margin-bottom:8px"><input id="q" type="search" placeholder="Buscar..." aria-label="Buscar"><select id="ftp" aria-label="Filtrar por tipo"><option value="">Todos</option><option value="in">Ingresos</option><option value="out">Gastos</option><option value="goal">Metas</option><option value="tr">Transferencias</option></select></div>
    <div id="list"></div>
   </section>
-  <section class="card">
+  <section class="card" data-tab="mas">
    <h2>Respaldo y exportar</h2>
    <p class="empty">Copia el respaldo, genera un CSV para Excel, o pega un CSV (fecha,tipo,categoria,monto,moneda,cuenta,nota) y pulsa Importar.</p>
    <textarea id="bk" aria-label="Datos de respaldo"></textarea>
@@ -143,13 +155,14 @@ textarea{width:100%;height:70px;background:var(--surf);color:var(--ink);border:1
  </div>
 </div>
 </div>
+<nav id="nav" aria-label="Secciones"><button data-k="resumen"><b>◔</b>Resumen</button><button data-k="mov"><b>⇅</b>Movs</button><button data-k="metas"><b>◎</b>Metas</button><button data-k="disc"><b>✦</b>Disciplina</button><button data-k="mas"><b>☰</b>Más</button></nav>
 <script>
 const $=s=>document.querySelector(s);
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const p2=n=>String(n).padStart(2,'0');
 const today=()=>{const d=new Date();return d.getFullYear()+'-'+p2(d.getMonth()+1)+'-'+p2(d.getDate())};
 const CURS=['CUP','USD','EUR','MLC'],PAL=['#1C7C57','#B02E5B','#B7870F','#3B6FB6','#7A4FB0','#C2602A','#2C9AA8','#8A8F3C'];
-const def=()=>({hist:{},debts:[],tpl:[],pin:'',tx:[],cats:{in:['Sueldo','Ventas','Otros ingresos'],out:['Comida','Transporte','Vivienda','Servicios','Salud','Ocio']},goals:[],accs:[{id:'a1',name:'Efectivo'},{id:'a2',name:'Banco / tarjeta'}],rates:{CUP:1,USD:400,EUR:450,MLC:400},disp:'CUP',budgets:{},rec:[],bk:0});
+const def=()=>({disc:[],ck:{},vault:[],hist:{},debts:[],tpl:[],pin:'',tx:[],cats:{in:['Sueldo','Ventas','Otros ingresos'],out:['Comida','Transporte','Vivienda','Servicios','Salud','Ocio']},goals:[],accs:[{id:'a1',name:'Efectivo'},{id:'a2',name:'Banco / tarjeta'}],rates:{CUP:1,USD:400,EUR:450,MLC:400},disp:'CUP',budgets:{},rec:[],bk:0});
 function norm(d){const b=def(),o=Object.assign(b,d);o.rates=Object.assign(def().rates,d.rates||{});o.rates.CUP=1;
  const mp={'US$':'USD','€':'EUR'},lc=CURS.includes(d.cur)?d.cur:(mp[d.cur]||'CUP');
  if(!d.disp||!CURS.includes(o.disp))o.disp=lc;delete o.cur;
@@ -223,14 +236,32 @@ function render(){
  const q=$('#q').value.trim().toLowerCase(),ft=$('#ftp').value;
  const L=T.filter(t=>(!ft||t.type===ft)&&(!q||[t.cat,t.note,an(t.acc),(S.goals.find(x=>x.id===t.goal)||{}).name].join(' ').toLowerCase().includes(q))).sort((a,b)=>b.date.localeCompare(a.date)||b.id.localeCompare(a.id));
  $('#list').innerHTML=L.length?L.map(t=>{const g=t.type==='goal'?S.goals.find(x=>x.id===t.goal):null;const cl=t.type==='in'?'in':t.type==='out'?'out':t.type==='goal'?'gl':'';const sg=t.type==='in'?'+':t.type==='out'?'−':t.type==='goal'?(t.amt>=0?'−':'+'):'⇄';
-  const nm2=t.type==='goal'?(t.amt>=0?'Meta: ':'Retiro de meta: ')+(g?g.name:'—'):t.type==='tr'?'Transferencia: '+an(t.acc)+' → '+an(t.to):t.cat;
+  const nm2=t.type==='goal'?(t.goal==='vault'?(t.amt>=0?'Multa al cofre':'Cofre liberado'):(t.amt>=0?'Meta: ':'Retiro de meta: ')+(g?g.name:'—')):t.type==='tr'?'Transferencia: '+an(t.acc)+' → '+an(t.to):t.cat;
   return `<div class="tx"><div><div>${esc(nm2)}</div><div class="m">${t.date} · ${esc(an(t.acc))}${t.note?' · '+esc(t.note):''}</div></div><div class="row"><div style="text-align:right"><span class="amt ${cl}">${sg} ${fmt(Math.abs(t.amt),t.cur)}</span>${t.cur!==S.disp?`<div class="m">≈ ${fmt(Math.abs(cv(t.amt,t.cur,t.r)))}</div>`:''}</div>${t.type==='in'||t.type==='out'?`<button class="x" data-a="ed" data-id="${t.id}" aria-label="Editar movimiento">✎</button>`:''}<button class="x" data-a="dt" data-id="${t.id}" aria-label="Eliminar movimiento">✕</button></div></div>`}).join(''):'<p class="empty">Sin movimientos para mostrar. Agrega el primero.</p>';
  $('#bk').value=JSON.stringify(S);
  extras();
  const old=!S.bk||Date.now()-S.bk>14*864e5;
  $('#warn').hidden=!(S.tx.length&&old);$('#warn').textContent=S.bk?'Hace más de 14 días que no copias tu respaldo. Tus datos viven solo en este navegador.':'Aún no has copiado un respaldo. Tus datos viven solo en este navegador; cópialo abajo en «Respaldo y exportar».';
 }
-function extras(){
+let TAB='resumen';
+const ymd=d=>d.getFullYear()+'-'+p2(d.getMonth()+1)+'-'+p2(d.getDate()),addD=(s,n)=>{const d=new Date(s+'T12:00');d.setDate(d.getDate()+n);return ymd(d)},at=(d,t)=>new Date(d+'T'+t+':00'),hm=d=>p2(d.getHours())+':'+p2(d.getMinutes());
+function slots(x,from,to){const o=[],end=addD(x.start,x.dur);for(let d=x.start;d<=to&&d<end;d=addD(d,1))if(d>=from)x.times.forEach(t=>{const a=at(d,t),b=new Date(a.getTime()+x.win*6e4);if(b.getTime()>x.cts)o.push({k:x.id+'|'+d+'|'+t,d,t,a,b})});return o}
+function discRun(){const now=Date.now(),td=ymd(new Date());let ch=0;S.disc.forEach(x=>slots(x,'0000',td).forEach(s=>{if(s.b<now&&!S.ck[s.k]){S.ck[s.k]='m';ch=1;const id=uid(),r=R(x.cur);S.tx.push({id,type:'goal',goal:'vault',amt:x.fine,cur:x.cur,r,acc:S.accs[0].id,cat:'Multa',date:s.d,note:x.name+' '+s.t});S.vault.push({id,amt:x.fine,cur:x.cur,r,until:addD(x.start,30),disc:x.name,date:s.d,rel:0})}}));if(ch)save();return ch}
+let NT={};try{NT=JSON.parse(localStorage.getItem('fin_nt')||'{}')}catch(e){}
+async function notif(t,b,tag){try{const r=await navigator.serviceWorker.ready;r.showNotification(t,{body:b,tag,icon:'icon-192.png',badge:'icon-192.png',vibrate:[200,100,200]})}catch(e){}}
+function tick(){if(!('Notification' in window)||Notification.permission!=='granted')return;const now=Date.now(),td=ymd(new Date());
+ S.disc.forEach(x=>slots(x,td,td).forEach(s=>{const st=S.ck[s.k],f=(k,c,t,b)=>{if(c&&!NT[s.k+k]){NT[s.k+k]=1;notif(t,b,s.k+k)}};
+  if(!st){f('s',now>=s.a&&now<s.a+9e5,'Es hora: '+x.name,'Tienes '+x.win+' min para marcar «Cumplido».');f('w',x.win>=10&&now>=s.b-3e5&&now<s.b,'Te quedan 5 min: '+x.name,'Si no marcas, la multa de '+fmt(x.fine,x.cur)+' va al cofre.')}
+  if(st==='m')f('m',now-s.b<18e5,'Multa de '+fmt(x.fine,x.cur),'No cumpliste «'+x.name+'» de las '+s.t+'. Se guardó en el cofre.')}));
+ try{localStorage.setItem('fin_nt',JSON.stringify(NT))}catch(e){}}
+function tabs(){document.querySelectorAll('[data-tab]').forEach(e=>e.hidden=e.dataset.tab!==TAB);document.querySelectorAll('#nav button').forEach(b=>b.setAttribute('aria-current',b.dataset.k===TAB))}
+function disc(){const now=Date.now(),td=ymd(new Date());fill('#dcu',CURS.map(c=>`<option>${c}</option>`).join(''));
+ $('#nm').textContent='Avisos: '+(!('Notification' in window)?'no disponibles en este navegador':{granted:'activados',denied:'bloqueados (permítelos en los ajustes del sitio)',default:'sin activar'}[Notification.permission]);
+ $('#today').innerHTML=S.disc.some(x=>slots(x,td,td).length)?S.disc.map(x=>slots(x,td,td).map(s=>{const st=S.ck[s.k],op=now>=s.a&&now<=s.b;return `<div class="tx"><div><div>${esc(x.name)} · ${s.t}</div><div class="m">${st==='d'?'Cumplido ✓':st==='m'?'<span class="fine">Fallado: multa de '+fmt(x.fine,x.cur)+'</span>':op?'Abierto hasta las '+hm(s.b):now<s.a?'Pendiente':'Cerrado'}</div></div>${op&&!st?`<button class="pri" data-a="ck" data-id="${s.k}">Cumplido</button>`:''}</div>`}).join('')).join(''):'<p class="empty">No hay horarios para hoy. Crea una meta de disciplina más abajo.</p>';
+ const vb=sumC(S.tx.filter(t=>t.goal==='vault')),op=S.vault.filter(v=>!v.rel);
+ $('#vault').innerHTML=`<div class="fine" style="font-family:Fraunces,Georgia,serif;font-size:1.9rem;font-weight:700">${fmt(vb)}</div><p class="m">Solo se puede liberar 30 días después de empezar cada meta.</p>`+(op.length?op.map(v=>`<div class="tx"><div><div>${fmt(v.amt,v.cur)} · ${esc(v.disc)}</div><div class="m">${v.until<=td?'Desbloqueado':'🔒 Bloqueado hasta '+v.until}</div></div>${v.until<=td?`<button data-a="vr" data-id="${v.id}">Liberar</button>`:''}</div>`).join(''):'<p class="empty">El cofre está vacío. Las multas se guardan aquí.</p>');
+ $('#dlist').innerHTML=S.disc.length?S.disc.map(x=>{const e=Object.entries(S.ck).filter(([k])=>k.startsWith(x.id+'|')),d=e.filter(a=>a[1]==='d').length,m=e.length-d;return `<div class="tx"><div><div>${esc(x.name)}</div><div class="m">${x.times.join(', ')} · margen ${x.win} min · multa ${fmt(x.fine,x.cur)} · desde ${x.start} (${x.dur} días)<br>Cumplidos ${d} · Fallados ${m}</div></div><button class="x" data-a="xd" data-id="${x.id}" aria-label="Eliminar meta ${esc(x.name)}">✕</button></div>`}).join(''):'<p class="empty">Aún no tienes metas de disciplina.</p>'}
+function extras(){tabs();disc();
  const ks=[...new Set([...Object.keys(HIST),...Object.keys(S.hist)])].sort().slice(-30),sr=['USD','EUR'].map(c=>ks.map(k=>(S.hist[k]||{})[c]||(HIST[k]||{})[c]||null)),all=sr.flat().filter(Boolean);
  $('#hist').innerHTML=ks.length>1&&all.length>1?(()=>{const mn=Math.min(...all),sp=(Math.max(...all)-mn)||1,X=i=>10+i*340/(ks.length-1),Y=v=>110-(v-mn)/sp*90,lv=i=>{const a=sr[i].filter(Boolean);return a.length?a[a.length-1]:'—'};
   return `<svg viewBox="0 0 360 130" width="360" role="img" aria-label="Evolución de USD y EUR en CUP">${sr.map((s,j)=>`<polyline fill="none" stroke-width="2" style="stroke:${j?'var(--goal)':'var(--in)'}" points="${s.map((v,i)=>v?X(i)+','+Y(v):'').filter(Boolean).join(' ')}"/>`).join('')}<text x="10" y="126" font-size="10" style="fill:var(--mute)">${ks[0]}</text><text x="350" y="126" text-anchor="end" font-size="10" style="fill:var(--mute)">${ks[ks.length-1]}</text></svg><p class="m"><span class="dot" style="background:var(--in)"></span>USD ${lv(0)} <span class="dot" style="background:var(--goal);margin-left:8px"></span>EUR ${lv(1)} (CUP)</p>`})():'<p class="m">El histórico aparecerá aquí cuando haya más de un día de tasas.</p>';
@@ -279,6 +310,9 @@ document.addEventListener('click',e=>{const b=e.target.closest('[data-a]');if(!b
  else if(a==='dd')S.debts=S.debts.filter(d=>d.id!==id);
  else if(a==='dp')S.debts.find(d=>d.id===id).paid=true;
  else if(a==='tq')S.tpl=S.tpl.filter(t=>t.id!==id);
+ else if(a==='ck'){const [i,d,t]=id.split('|'),x=S.disc.find(z=>z.id===i),a0=at(d,t).getTime(),n=Date.now();if(x&&n>=a0&&n<=a0+x.win*6e4)S.ck[id]='d'}
+ else if(a==='vr'){const v=S.vault.find(z=>z.id===id);if(v&&!v.rel&&v.until<=today()){v.rel=1;S.tx.push({id:uid(),type:'goal',goal:'vault',amt:-v.amt,cur:v.cur,r:v.r,acc:S.accs[0].id,cat:'Cofre',date:today(),note:'Cofre liberado'})}}
+ else if(a==='xd')S.disc=S.disc.filter(z=>z.id!==id);
  else if(a==='tu'){const t=S.tpl.find(x=>x.id===id);S.tx.push({id:uid(),type:t.type,amt:t.amt,cur:t.cur,r:R(t.cur),acc:t.acc,cat:t.cat,date:today(),note:t.name===t.cat?'':t.name});if(M&&M!==today().slice(0,7))M=today().slice(0,7)}
  else if(a==='dr')S.rec=S.rec.filter(r=>r.id!==id);
  else if(a==='dg'){S.goals=S.goals.filter(g=>g.id!==id);S.tx=S.tx.filter(t=>t.goal!==id)}
@@ -333,7 +367,14 @@ async function fbInit(){const msg=t=>$('#sync').textContent=t;try{const cfg=(awa
    msg('Sincronizado con '+u.email+' ✓')},e=>msg('Error de sincronización: '+e.code))})
 }catch(e){msg('Sincronización no disponible ahora (sin internet o configuración incorrecta).')}}
 if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
-$('#date').value=today();runRec();render();lockInit();fbInit();loadHist();
+$('#nav').onclick=e=>{const b=e.target.closest('button');if(!b)return;TAB=b.dataset.k;tabs();scrollTo(0,0)};
+$('#nb').onclick=async()=>{if(!('Notification' in window))return;const p=await Notification.requestPermission();render();if(p==='granted')notif('Avisos activados','Te avisaré en cada horario mientras la app esté abierta o en segundo plano.','t')};
+$('#dcb').onclick=()=>{const n=$('#dn').value.trim(),ts=$('#dtm').value.split(/[ ,;]+/).filter(Boolean),f=parseFloat($('#df').value),e=$('#de');
+ if(!n||!ts.length||ts.some(t=>!/^([01]\d|2[0-3]):[0-5]\d$/.test(t))||!(f>0)){e.textContent='Escribe el nombre, los horarios como 07:00, 13:00, 20:00 y una multa mayor que cero.';return}
+ e.textContent='';S.disc.push({id:uid(),name:n,times:[...new Set(ts)].sort(),win:+$('#dwin').value,fine:f,cur:$('#dcu').value,start:$('#ds').value||today(),dur:Math.max(1,+$('#dur').value||30),cts:Date.now(),conf:'self'});
+ ['#dn','#dtm','#df'].forEach(i=>$(i).value='');save();render()};
+$('#date').value=today();$('#ds').value=today();runRec();discRun();render();lockInit();fbInit();loadHist();tick();
+setInterval(()=>{const c=discRun();tick();if(c||TAB==='disc')render()},20000);
 </script>
 </body>
 </html>
